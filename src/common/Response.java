@@ -1,5 +1,10 @@
 package common;
 
+/**
+ * результат выполнения команды
+ * @param success успех выполнения
+ * @param message сообщение
+ */
 public class Response implements java.io.Serializable {
     private boolean success;
     private String message;

@@ -15,6 +15,11 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
+/**
+ * исполняет скрипт из файла
+ * @param request запрос с именем файла
+ * @return результат выполнения скрипта
+ */
 public class ExecuteScriptCommand implements Command {
     private static java.util.Vector<String> activeScripts = new java.util.Vector<>();
     private CommandManager commandManager;

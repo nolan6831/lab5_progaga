@@ -5,7 +5,9 @@ import common.Response;
 import server.utils.CollectionManager;
 
 /**
- * удаляет города из коллекции по виду правления
+ * удаляет города по виду правления
+ * @param request запрос с видом правления
+ * @return результат удаления
  */
 public class RemoveAllByGovernmentCommand implements Command{
     private CollectionManager collectionManager;

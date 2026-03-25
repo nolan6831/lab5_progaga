@@ -8,6 +8,10 @@ import server.utils.FileManager;
 
 import java.util.Vector;
 
+/**
+ * точка входа приложения
+ * @param args аргументы командной строки
+ */
 public class Main {
     public static void main(String[] args) {
         if (args.length == 0) {

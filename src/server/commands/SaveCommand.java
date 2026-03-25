@@ -5,6 +5,11 @@ import common.Response;
 import server.utils.CollectionManager;
 import server.utils.FileManager;
 
+/**
+ * сохраняет коллекцию в файл
+ * @param request запрос
+ * @return результат сохранения
+ */
 public class SaveCommand implements Command {
     private final CollectionManager collectionManager;
     private final FileManager fileManager;

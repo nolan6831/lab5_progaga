@@ -5,8 +5,9 @@ import common.Request;
 import server.utils.CollectionManager;
 
 /**
- * информация по коллекции
- * @return
+ * показывает информацию о коллекции
+ * @param request запрос
+ * @return информация о коллекции
  */
 public class InfoCommand implements Command {
     private CollectionManager collectionManager;

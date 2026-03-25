@@ -4,6 +4,11 @@ import common.Response;
 import common.Request;
 import server.utils.CollectionManager;
 
+/**
+ * показывает элементы коллекции
+ * @param request запрос
+ * @return содержимое коллекции
+ */
 public class ShowCommand implements Command {
     private CollectionManager collectionManager;
 

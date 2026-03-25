@@ -1,5 +1,10 @@
 package common;
 
+/**
+ * координаты города
+ * @param x координата X
+ * @param y координата Y
+ */
 public class Coordinates implements java.io.Serializable {
     private int x;
     private Float y; //Максимальное значение поля: 709, Поле не может быть null

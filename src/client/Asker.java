@@ -4,6 +4,10 @@ import common.*;
 
 import java.math.BigDecimal;
 
+/**
+ * запрашивает данные у пользователя
+ * @return введённые данные
+ */
 public class Asker {
     private final ConsoleReader console;
 

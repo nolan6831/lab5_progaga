@@ -5,8 +5,9 @@ import common.Response;
 import server.utils.CollectionManager;
 
 /**
- * фильтрует города по имени
- * @return отфильтрованный список городов
+ * фильтрует города по началу имени
+ * @param request запрос с началом имени
+ * @return отфильтрованный список
  */
 public class FilterStartsWithName implements Command{
     private CollectionManager collectionManager;

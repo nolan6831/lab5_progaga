@@ -5,7 +5,9 @@ import common.Request;
 import server.utils.CollectionManager;
 
 /**
- * удаляет город по предоставленному id
+ * удаляет город по id
+ * @param request запрос с id
+ * @return результат удаления
  */
 public class RemoveByIdCommand implements Command {
     private CollectionManager collectionManager;

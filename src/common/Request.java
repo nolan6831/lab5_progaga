@@ -1,5 +1,11 @@
 package common;
 
+/**
+ * запрос на выполнение команды
+ * @param commandName имя команды
+ * @param stringArgument аргумент строки
+ * @param cityArgument объект города
+ */
 public class Request implements java.io.Serializable {
     private String commandName;
     private City cityArgument;

@@ -5,7 +5,9 @@ import common.Request;
 import server.utils.CollectionManager;
 
 /**
- * удаляет первый элемент из спискуа
+ * удаляет первый элемент из коллекции
+ * @param request запрос
+ * @return результат удаления
  */
 public class RemoveFirstCommand implements Command{
     private CollectionManager collectionManager;

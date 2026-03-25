@@ -2,6 +2,10 @@ package server.utils;
 
 import common.City;
 
+/**
+ * управляет коллекцией городов
+ * @param collection коллекция городов
+ */
 public class CollectionManager {
     private java.util.Vector<City> collection;
     private java.time.LocalDateTime creationDate;

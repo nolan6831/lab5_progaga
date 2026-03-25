@@ -1,5 +1,9 @@
 package common;
 
+/**
+ * человек (губернатор)
+ * @param height рост
+ */
 public class Human implements java.io.Serializable {
     private Long height; //Значение поля должно быть больше 0
 

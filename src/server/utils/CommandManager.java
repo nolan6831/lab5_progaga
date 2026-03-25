@@ -5,6 +5,11 @@ import common.Response;
 import server.commands.*;
 import java.util.HashMap;
 
+/**
+ * управляет командами
+ * @param commandName имя команды
+ * @return результат выполнения
+ */
 public class CommandManager {
     private HashMap<String, Command> commands;
 

@@ -6,10 +6,10 @@ import common.Response;
 import server.utils.CollectionManager;
 
 /**
- * обращается к коллекции и добавляет элемент
- * @return возвращает добавленный элемент
+ * добавляет элемент в коллекцию
+ * @param request запрос с городом
+ * @return результат добавления
  */
-
 public class AddCommand implements Command {
     private CollectionManager collectionManager;
 

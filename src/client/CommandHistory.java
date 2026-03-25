@@ -3,7 +3,10 @@ package client;
 import java.util.ArrayDeque;
 import java.util.Deque;
 
-
+/**
+ * хранит историю команд
+ * @param command команда
+ */
 public class CommandHistory {
     private static final int MAX_SIZE = 7;
     private final Deque<String> history = new ArrayDeque<>();

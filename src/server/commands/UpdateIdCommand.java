@@ -5,6 +5,11 @@ import common.Response;
 import common.Request;
 import server.utils.CollectionManager;
 
+/**
+ * обновляет элемент по id
+ * @param request запрос с id и новым городом
+ * @return результат обновления
+ */
 public class UpdateIdCommand implements Command {
     private CollectionManager collectionManager;
 

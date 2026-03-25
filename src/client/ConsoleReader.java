@@ -9,6 +9,11 @@ import org.jline.reader.LineReader;
 import org.jline.reader.LineReaderBuilder;
 import java.io.IOException;
 
+/**
+ * читает ввод с консоли
+ * @param prompt приглашение
+ * @return введённая строка
+ */
 public class ConsoleReader {
     DefaultHistory history = new DefaultHistory();
     Completer completer = new StringsCompleter("help", "info", "show", "add", "update", "remove_by_id","clear", "save",

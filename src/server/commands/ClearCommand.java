@@ -5,8 +5,9 @@ import common.Request;
 import server.utils.CollectionManager;
 
 /**
- * обращается к колекции и очищает ее
- * @return возвращает пустую коллекцию
+ * очищает коллекцию
+ * @param request запрос
+ * @return результат очистки
  */
 public class ClearCommand implements Command {
     private CollectionManager collectionManager;

@@ -12,6 +12,11 @@ import common.StandardOfLiving;
 import java.io.*;
 import java.util.Vector;
 
+/**
+ * читает и записывает коллекцию в файл
+ * @param filePath путь к файлу
+ * @return коллекция из файла
+ */
 public class FileManager {
     private final String filePath;
     private final XStream xstream;

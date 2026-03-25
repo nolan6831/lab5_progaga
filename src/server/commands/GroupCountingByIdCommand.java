@@ -5,8 +5,9 @@ import common.Response;
 import server.utils.CollectionManager;
 
 /**
- * группирует города по id
- * @return список по одному id
+ * группирует и считает города по id
+ * @param request запрос
+ * @return сгруппированный список
  */
 public class GroupCountingByIdCommand implements Command {
     private CollectionManager collectionManager;

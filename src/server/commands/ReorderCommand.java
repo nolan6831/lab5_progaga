@@ -5,7 +5,9 @@ import common.Request;
 import server.utils.CollectionManager;
 
 /**
- * отсортировывает
+ * сортирует коллекцию в обратном порядке
+ * @param request запрос
+ * @return результат сортировки
  */
 public class ReorderCommand implements Command {
     private CollectionManager collectionManager;
