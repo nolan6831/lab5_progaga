@@ -14,13 +14,14 @@ import java.util.Vector;
 
 /**
  * читает и записывает коллекцию в файл
- * @param filePath путь к файлу
- * @return коллекция из файла
  */
 public class FileManager {
     private final String filePath;
     private final XStream xstream;
 
+    /**
+     * @param filePath путь к файлу
+     */
     public FileManager(String filePath) {
         this.filePath = filePath;
         this.xstream = new XStream();
@@ -44,6 +45,10 @@ public class FileManager {
         xstream.alias("standardOfLiving", StandardOfLiving.class);
     }
 
+    /**
+     * читает коллекцию из файла
+     * @return коллекция из файла
+     */
     public Vector<City> readCollection() {
         Vector<City> collection = new Vector<>();
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
@@ -67,6 +72,11 @@ public class FileManager {
     }
 
 
+    /**
+     * записывает коллекцию в файл
+     * @param collection коллекция для записи
+     * @throws IOException ошибка записи
+     */
     public void writeCollection(Vector<City> collection) throws IOException {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
             String xml = xstream.toXML(collection);

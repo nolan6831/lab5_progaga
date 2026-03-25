@@ -5,13 +5,16 @@ import java.util.Deque;
 
 /**
  * хранит историю команд
- * @param command команда
  */
 public class CommandHistory {
     private static final int MAX_SIZE = 7;
     private final Deque<String> history = new ArrayDeque<>();
 
 
+    /**
+     * добавляет команду в историю
+     * @param command команда
+     */
     public void addCommand(String command) {
         if (command == null || command.isEmpty()) {
             return;
@@ -23,6 +26,9 @@ public class CommandHistory {
     }
 
 
+    /**
+     * выводит историю команд
+     */
     public void printHistory() {
         if (history.isEmpty()) {
             System.out.println("История команд пуста.");

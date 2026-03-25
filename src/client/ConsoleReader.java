@@ -11,8 +11,6 @@ import java.io.IOException;
 
 /**
  * читает ввод с консоли
- * @param prompt приглашение
- * @return введённая строка
  */
 public class ConsoleReader {
     DefaultHistory history = new DefaultHistory();
@@ -22,6 +20,9 @@ public class ConsoleReader {
     private LineReader reader;
     private Terminal terminal;
 
+    /**
+     * инициализирует терминал
+     */
     public ConsoleReader() {
         try {
             terminal = TerminalBuilder.terminal();
@@ -36,6 +37,11 @@ public class ConsoleReader {
         }
     }
 
+    /**
+     * читает строку с консоли
+     * @param prompt приглашение
+     * @return введённая строка
+     */
     public String readLine(String prompt) {
         try {
             String line = reader.readLine(prompt);

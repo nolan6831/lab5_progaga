@@ -6,17 +6,24 @@ import server.utils.CollectionManager;
 
 /**
  * удаляет город по id
- * @param request запрос с id
- * @return результат удаления
  */
 public class RemoveByIdCommand implements Command {
     private CollectionManager collectionManager;
 
+    /**
+     * создаёт команду remove_by_id
+     * @param collectionManager менеджер коллекции
+     */
     public RemoveByIdCommand(CollectionManager collectionManager){
         this.collectionManager = collectionManager;
     }
 
     @Override
+    /**
+     * удаляет город по id - ищет и удаляет
+     * @param request запрос с id
+     * @return результат удаления
+     */
     public Response execute(Request request){
         String arg = request.getStringArgument();
         if (arg == null || arg.trim().isEmpty()) {
@@ -42,11 +49,17 @@ public class RemoveByIdCommand implements Command {
         }
     }
     @Override
+    /**
+     * @return имя команды
+     */
     public String getName(){
         return "remove_by_id";
     }
 
     @Override
+    /**
+     * @return описание команды
+     */
     public String getDescription(){
         return "удаляет элемент в коллекции";
     }

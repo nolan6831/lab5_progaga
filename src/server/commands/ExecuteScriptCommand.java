@@ -17,18 +17,25 @@ import java.io.IOException;
 
 /**
  * исполняет скрипт из файла
- * @param request запрос с именем файла
- * @return результат выполнения скрипта
  */
 public class ExecuteScriptCommand implements Command {
     private static java.util.Vector<String> activeScripts = new java.util.Vector<>();
     private CommandManager commandManager;
 
+    /**
+     * создаёт команду execute_script
+     * @param commandManager менеджер команд
+     */
     public ExecuteScriptCommand(CommandManager commandManager) {
         this.commandManager = commandManager;
     }
 
     @Override
+    /**
+     * выполняет скрипт из файла - читает и исполняет команды
+     * @param request запрос с именем файла
+     * @return результат выполнения
+     */
     public Response execute(Request request) {
         String fileName = request.getStringArgument();
         
@@ -238,15 +245,25 @@ public class ExecuteScriptCommand implements Command {
     }
 
     @Override
+    /**
+     * @return имя команды "execute_script"
+     */
     public String getName() {
         return "execute_script";
     }
 
     @Override
+    /**
+     * @return описание команды
+     */
     public String getDescription() {
         return "считать и исполнить скрипт из указанного файла";
     }
 
+    /**
+     * удаляет скрипт из активных
+     * @param fileName имя файла
+     */
     public static void removeScript(String fileName) {
         activeScripts.remove(fileName);
     }

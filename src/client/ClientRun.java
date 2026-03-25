@@ -8,9 +8,12 @@ import server.utils.CommandManager;
 
 /**
  * запускает клиентский интерфейс
- * @param commandManager менеджер команд
  */
 public class ClientRun {
+    /**
+     * запускает клиентский интерфейс
+     * @param commandManager менеджер команд
+     */
     public static void runCli(CommandManager commandManager) {
         ConsoleReader console = new ConsoleReader();
         Asker asker = new Asker(console);

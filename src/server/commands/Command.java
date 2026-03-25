@@ -5,10 +5,20 @@ import common.Response;
 
 /**
  * интерфейс команды
- * @return результат выполнения
  */
 public interface Command {
+    /**
+     * выполняет команду
+     * @param request запрос
+     * @return результат
+     */
     Response execute(Request request);
+    /**
+     * @return имя команды
+     */
     String getName();
+    /**
+     * @return описание команды
+     */
     String getDescription();
 }

@@ -6,16 +6,23 @@ import java.math.BigDecimal;
 
 /**
  * запрашивает данные у пользователя
- * @return введённые данные
  */
 public class Asker {
     private final ConsoleReader console;
 
+    /**
+     * создаёт Asker
+     * @param console консольный читатель
+     */
     public Asker(ConsoleReader console) {
         this.console = console;
     }
 
 
+    /**
+     * читает название города
+     * @return название города
+     */
     public String readName() {
         while (true) {
             String input = console.readLine("Введите название города: ");
@@ -30,6 +37,10 @@ public class Asker {
     }
 
 
+    /**
+     * читает координаты
+     * @return координаты
+     */
     public Coordinates readCoordinates() {
         int x;
         while (true) {
@@ -88,6 +99,10 @@ public class Asker {
     }
 
 
+    /**
+     * читает площадь
+     * @return площадь
+     */
     public Double readArea() {
         while (true) {
             String input = console.readLine("Введите площадь (число > 0): ");
@@ -122,6 +137,10 @@ public class Asker {
         }
     }
 
+    /**
+     * читает население
+     * @return население
+     */
     public Integer readPopulation() {
         while (true) {
             String input = console.readLine("Введите население (целое число > 0): ");
@@ -149,6 +168,10 @@ public class Asker {
     }
 
 
+    /**
+     * читает высоту над уровнем моря
+     * @return высота над уровнем моря
+     */
     public float readMetersAboveSeaLevel() {
         while (true) {
             String input = console.readLine("Введите высоту над уровнем моря (число): ");
@@ -179,6 +202,10 @@ public class Asker {
     }
 
 
+    /**
+     * читает климат
+     * @return климат
+     */
     public Climate readClimate() {
         System.out.println("Доступные значения Climate:");
         for (Climate c : Climate.values()) {
@@ -200,6 +227,10 @@ public class Asker {
     }
 
 
+    /**
+     * читает форму правления
+     * @return форма правления
+     */
     public Government readGovernment() {
         System.out.println("Доступные значения Government:");
         for (Government g : Government.values()) {
@@ -221,6 +252,10 @@ public class Asker {
     }
 
 
+    /**
+     * читает уровень жизни
+     * @return уровень жизни
+     */
     public StandardOfLiving readStandardOfLiving() {
         System.out.println("Доступные значения StandardOfLiving:");
         for (StandardOfLiving s : StandardOfLiving.values()) {
@@ -243,6 +278,10 @@ public class Asker {
     }
 
 
+    /**
+     * читает губернатора
+     * @return губернатор
+     */
     public Human readGovernor() {
         Long height = null;
         System.out.println("Введите рост губернатора (целое число > 0, или пустую строку для пропуска): ");
@@ -273,6 +312,10 @@ public class Asker {
     }
 
 
+    /**
+     * читает город
+     * @return город
+     */
     public City readCity() {
         City city = new City();
         city.setName(readName());

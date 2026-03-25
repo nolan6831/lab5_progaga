@@ -7,17 +7,24 @@ import server.utils.CollectionManager;
 
 /**
  * обновляет элемент по id
- * @param request запрос с id и новым городом
- * @return результат обновления
  */
 public class UpdateIdCommand implements Command {
     private CollectionManager collectionManager;
 
+    /**
+     * создаёт команду update
+     * @param collectionManager менеджер коллекции
+     */
     public UpdateIdCommand(CollectionManager collectionManager){
         this.collectionManager = collectionManager;
     }
 
     @Override
+    /**
+     * обновляет элемент по id - заменяет город
+     * @param request запрос с id и новым городом
+     * @return результат обновления
+     */
     public Response execute(Request request){
         String arg = request.getStringArgument();
         if (arg == null || arg.trim().isEmpty()) {
@@ -43,11 +50,17 @@ public class UpdateIdCommand implements Command {
     }
 
     @Override
+    /**
+     * @return имя команды
+     */
     public String getName(){
         return "update_id_command";
     }
 
     @Override
+    /**
+     * @return описание команды
+     */
     public String getDescription(){
         return "обновляет id";
     }

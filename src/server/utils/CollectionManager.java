@@ -4,7 +4,6 @@ import common.City;
 
 /**
  * управляет коллекцией городов
- * @param collection коллекция городов
  */
 public class CollectionManager {
     private java.util.Vector<City> collection;
@@ -13,6 +12,10 @@ public class CollectionManager {
     private Long maxId = 0L;
 
 
+    /**
+     * создаёт менеджер коллекции
+     * @param collection коллекция городов
+     */
     public CollectionManager(java.util.Vector<City> collection){
         this.collection = collection;
         this.creationDate = java.time.LocalDateTime.now();
@@ -25,29 +28,53 @@ public class CollectionManager {
         this.currentId = maxId + 1;
     }
 
+    /**
+     * получает коллекцию городов
+     * @return коллекция городов
+     */
     public java.util.Vector<City> getCollection(){
         return this.collection;
     }
 
+    /**
+     * устанавливает коллекцию
+     * @param collection коллекция городов
+     */
     public void setCollection(java.util.Vector<City> collection){
         this.collection = collection;
     }
 
+    /**
+     * получает дату создания
+     * @return дата создания
+     */
     public java.time.LocalDateTime getCreationDate(){
         return this.creationDate;
 
     }
 
+    /**
+     * устанавливает дату создания
+     * @param creationDate дата создания
+     */
     public void setCreationDate(java.time.LocalDateTime creationDate){
         this.creationDate = creationDate;
     }
 
+    /**
+     * возвращает информацию о коллекции
+     * @return информация о коллекции
+     */
     public String info(){
         return "вектор: " + this.collection.getClass().getName() +
                 "\nдата создания: " + this.creationDate.toString() +
                 "\nколичество элементов: " + this.collection.size();
     }
 
+    /**
+     * показывает коллекцию
+     * @return строковое представление коллекции
+     */
     public String show() {
         if (collection.isEmpty()) {
             return "Коллекция пуста.";
@@ -59,14 +86,24 @@ public class CollectionManager {
         return result.toString();
     }
 
-    public void add(City city){ // needs and argument
+    /**
+     * добавляет город в коллекцию
+     * @param city город для добавления
+     */
+    public void add(City city){
         city.setId(currentId);
         currentId = currentId + 1;
         city.setCreationDate(java.time.LocalDateTime.now());
         this.collection.add(city);
     }
 
-    public boolean updateId(Long id, City newCity){ // needs an argument and an element
+    /**
+     * обновляет город по id
+     * @param id идентификатор города
+     * @param newCity новый город
+     * @return true если обновлён
+     */
+    public boolean updateId(Long id, City newCity){
         for (int i = 0; i < this.collection.size(); i++){
             City currentCity = this.collection.get(i);
             if (currentCity.getId().equals(id)){
@@ -79,7 +116,12 @@ public class CollectionManager {
         return false;
     }
 
-    public boolean removeById(Long id){ // needs an argument
+    /**
+     * удаляет город по id
+     * @param id идентификатор города
+     * @return true если удалён
+     */
+    public boolean removeById(Long id){
         for (int i = 0; i < this.collection.size(); i++){
             City currentCity = this.collection.get(i);
             if (currentCity.getId().equals(id)){
@@ -91,10 +133,17 @@ public class CollectionManager {
 
     }
 
+    /**
+     * очищает коллекцию
+     */
     public void clear(){
         this.collection.clear();
     }
 
+    /**
+     * удаляет первый элемент
+     * @return true если удалён
+     */
     public boolean removeFirst(){
         if (!this.collection.isEmpty()){
             this.collection.remove(0);
@@ -105,12 +154,21 @@ public class CollectionManager {
         }
     }
 
+    /**
+     * переворачивает коллекцию
+     * @return true если отсортировано
+     */
     public boolean reorder(){
         java.util.Collections.reverse(this.collection);
         return true;
     }
 
-    public boolean removeAllByGovernment(common.Government government){ // needs an argument
+    /**
+     * удаляет города по виду правления
+     * @param government вид правления
+     * @return true если удалены города
+     */
+    public boolean removeAllByGovernment(common.Government government){
         boolean isRemoved = false;
         for (int i = this.collection.size() - 1; i>= 0; i--){
             City currentCity = this.collection.get(i);
@@ -122,6 +180,10 @@ public class CollectionManager {
         return isRemoved;
     }
 
+    /**
+     * группирует города по id
+     * @return сгруппированные города по id
+     */
     public String groupCountingById(){
         String result = "";
 
@@ -132,7 +194,12 @@ public class CollectionManager {
         return result;
     }
 
-    public String filterStartsWithName(String name){ // needs an argument
+    /**
+     * фильтрует города по началу имени
+     * @param name начало имени города
+     * @return отфильтрованные города
+     */
+    public String filterStartsWithName(String name){
         String result = "";
 
         for (int i = 0; i < this.collection.size(); i++){

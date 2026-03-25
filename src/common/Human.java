@@ -2,19 +2,30 @@ package common;
 
 /**
  * человек (губернатор)
- * @param height рост
  */
 public class Human implements java.io.Serializable {
     private Long height; //Значение поля должно быть больше 0
 
+    /**
+     * создаёт человека
+     * @param height рост
+     */
     public Human(Long height) {
         this.height = height;
     }
 
+    /**
+     * получает рост
+     * @return рост
+     */
     public Long getHeight(){
         return this.height;
     }
 
+    /**
+     * устанавливает рост
+     * @param height рост
+     */
     public void setHeight(Long height){
         this.height = height;
     }

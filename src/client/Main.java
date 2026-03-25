@@ -10,9 +10,12 @@ import java.util.Vector;
 
 /**
  * точка входа приложения
- * @param args аргументы командной строки
  */
 public class Main {
+    /**
+     * точка входа приложения
+     * @param args аргументы командной строки
+     */
     public static void main(String[] args) {
         if (args.length == 0) {
             System.out.println("Ошибка: укажите имя файла с коллекцией в аргументах командной строки.");

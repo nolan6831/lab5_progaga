@@ -6,18 +6,25 @@ import server.utils.CollectionManager;
 
 /**
  * удаляет города по виду правления
- * @param request запрос с видом правления
- * @return результат удаления
  */
 public class RemoveAllByGovernmentCommand implements Command{
     private CollectionManager collectionManager;
 
+    /**
+     * создаёт команду remove_all_by_government
+     * @param collectionManager менеджер коллекции
+     */
     public RemoveAllByGovernmentCommand(CollectionManager collectionManager){
         this.collectionManager = collectionManager;
     }
 
 
     @Override
+    /**
+     * удаляет города по виду правления - фильтрует и удаляет
+     * @param request запрос с видом правления
+     * @return результат удаления
+     */
     public Response execute(Request request){
         String arg = request.getStringArgument();
         if (arg == null || arg.trim().isEmpty()) {
@@ -41,11 +48,17 @@ public class RemoveAllByGovernmentCommand implements Command{
         }
     }
     @Override
+    /**
+     * @return имя команды
+     */
     public String getName(){
         return "remove_all_by_government";
     }
 
     @Override
+    /**
+     * @return описание команды
+     */
     public String getDescription(){
         return "удаляет все города по виду правления";
     }
