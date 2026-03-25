@@ -1,0 +1,18 @@
+<vector>
+  <city>
+    <id>1</id>
+    <name>pppp</name>
+    <coordinates>
+      <x>23</x>
+      <y>44.0</y>
+    </coordinates>
+    <creationDate>2026-03-10T10:53:18.2997066</creationDate>
+    <area>52.0</area>
+    <population>2</population>
+    <metersAboveSeaLevel>0.0</metersAboveSeaLevel>
+    <climate>TROPICAL_SAVANNA</climate>
+    <government>MONARCHY</government>
+    <standardOfLiving>ULTRA_HIGH</standardOfLiving>
+    <governor/>
+  </city>
+</vector>

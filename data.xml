@@ -1,0 +1,33 @@
+<vector>
+    <city>
+        <id>1</id>
+        <name>dada</name>
+        <coordinates>
+            <x>1</x>
+            <y>2.0</y>
+        </coordinates>
+        <creationDate>2026-03-09T21:55:10.7486045</creationDate>
+        <area>3.0</area>
+        <population>4</population>
+        <metersAboveSeaLevel>5.0</metersAboveSeaLevel>
+        <climate>TROPICAL_SAVANNA</climate>
+        <standardOfLiving>NIGHTMARE</standardOfLiving>
+        <governor/>
+    </city>
+    <city>
+        <id>2</id>
+        <name>deda</name>
+        <coordinates>
+            <x>2</x>
+            <y>2.0</y>
+        </coordinates>
+        <creationDate>2026-03-09T22:01:05.1554119</creationDate>
+        <area>2.0</area>
+        <population>2</population>
+        <metersAboveSeaLevel>2.0</metersAboveSeaLevel>
+        <climate>TROPICAL_SAVANNA</climate>
+        <government>DESPOTISM</government>
+        <standardOfLiving>HIGH</standardOfLiving>
+        <governor/>
+    </city>
+</vector>
